@@ -1,8 +1,17 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import HomePage from './pages/HomePage'
+import ListPage from './pages/ListPage'
+import DetailPage from './pages/DetailPage'
+
 function App() {
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-      <h1 className="text-4xl font-bold text-orange-500">BeeCook 🍳</h1>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/list" element={<ListPage />} />
+        <Route path="/list/:slug" element={<DetailPage />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
