@@ -49,3 +49,18 @@ export interface ApiResponse<T> {
   message: string
   data: T | null
 }
+
+export interface IngredientField {
+  description: string
+}
+
+export interface RecipeField {
+  description: string
+}
+
+export interface NutritionField {
+  calory: string
+  protein: string
+  carbohydrate: string
+  fat: string
+}
