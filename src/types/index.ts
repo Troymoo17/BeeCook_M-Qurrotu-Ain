@@ -1,7 +1,9 @@
 export interface Category {
   id: number
   name: string
+  slug: string
   image: string | null
+  file_id: string | null
 }
 
 export interface Ingredient {
@@ -9,17 +11,18 @@ export interface Ingredient {
   description: string
 }
 
-export interface Recipe {
+export interface RecipeStep {
   id: number
   description: string
   sort_number: number
 }
 
 export interface Nutrition {
-  calory: string
-  protein: string
-  carbohydrate: string
-  fat: string
+  id: number
+  calory: number
+  protein: number
+  carbohydrate: number
+  fat: number
 }
 
 export interface Menu {
@@ -27,14 +30,17 @@ export interface Menu {
   name: string
   slug: string
   description: string
-  cooking_duration: string
-  category_id: number
-  category: Category
-  image: string | null
+  cooking_duration: number
   file_id: string | null
+  image: string | null
+  category_id: number
+  category: {
+    name: string
+    slug: string
+  }
   ingredients: Ingredient[]
-  recipes: Recipe[]
-  nutritions: Nutrition
+  recipes: RecipeStep[]
+  nutrition: Nutrition
 }
 
 export interface ApiResponse<T> {
@@ -42,12 +48,4 @@ export interface ApiResponse<T> {
   status: string
   message: string
   data: T | null
-}
-
-export interface PaginatedData<T> {
-  data: T[]
-  total: number
-  page: number
-  limit: number
-  total_pages: number
 }
