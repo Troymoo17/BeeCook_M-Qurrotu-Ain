@@ -117,13 +117,13 @@ export default function ListPage() {
 
       {/* Filter Kategori */}
       <section className="px-4 md:px-12 mt-8">
-        <div className="flex gap-3 overflow-x-auto pb-2 scrollbar-hide">
+        <div className="flex gap-9 overflow-x-auto pb-2 scrollbar-hide">
           <button
             onClick={() => setCategory("")}
-            className={`px-8 py-3 rounded-xl text-sm font-semibold whitespace-nowrap transition shadow-sm ${
+           className={`w-53.25 h-20.5 rounded-xl text-sm font-semibold whitespace-nowrap transition shadow-sm ${
               categoryId === ""
-                ? "bg-yellow-500 text-white"
-                : "bg-[#0B1424] text-white hover:bg-[#1a2436]"
+                ? "bg-[#E8B431] text-white"
+                : "bg-[#111827] text-white hover:bg-[#1a2436]"
             }`}
           >
             Semua
@@ -132,10 +132,10 @@ export default function ListPage() {
             <button
               key={cat.id}
               onClick={() => setCategory(String(cat.id))}
-              className={`px-8 py-3 rounded-xl text-sm font-semibold whitespace-nowrap transition shadow-sm ${
+              className={`w-53.25 h-20.5 rounded-xl text-sm font-semibold whitespace-nowrap transition shadow-sm ${
                 categoryId === String(cat.id)
-                  ? "bg-yellow-500 text-white"
-                  : "bg-[#0B1424] text-white hover:bg-[#1a2436]"
+                  ? "bg-[#E8B431] text-white"
+                  : "bg-[#111827] text-white hover:bg-[#1a2436]"
               }`}
             >
               {cat.name}
