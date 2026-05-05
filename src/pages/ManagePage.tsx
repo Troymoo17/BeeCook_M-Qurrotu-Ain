@@ -147,7 +147,9 @@ export default function ManagePage() {
   };
 
   useEffect(() => {
-    fetchMenus(currentPage);
+    (async () => {
+      await fetchMenus(currentPage);
+    })();
   }, [currentPage]);
 
   const confirmDelete = async () => {
