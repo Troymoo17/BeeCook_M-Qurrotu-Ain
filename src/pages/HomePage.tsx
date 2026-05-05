@@ -49,23 +49,26 @@ export default function HomePage() {
       /> */}
 
       {/* ===================== HERO SECTION ===================== */}
-      <section className="relative px-6 md:px-12 py-12 md:py-20">
-        <div className="relative z-10 max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-8">
+      <section className="relative px-6 md:px-12 py-12 md:py-2">
+        <div className="flex flex-col md:flex-row items-center">
           {/* Left content */}
           <div className="w-full md:max-w-md text-center md:text-left">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-black leading-tight mb-6">
-              Where{" "}
-              <span className="relative inline-block text-yellow-500">
-                Quality
-                <img
-                  src="/assets/stars.png"
-                  alt=""
-                  aria-hidden="true"
-                  className="absolute -top-4 -right-6 h-6 md:h-8"
-                />
+            <h1 className="font-black leading-tight mb-6">
+              <span className="block text-6xl md:text-8xl  whitespace-nowrap">
+                Where{" "}
+                <span className="relative inline-block text-yellow-500">
+                  Quality
+                  <img
+                    src="/assets/stars.png"
+                    alt=""
+                    aria-hidden="true"
+                    className="absolute -top-4 -right-6 h-6 md:h-8"
+                  />
+                </span>
               </span>
-              <br />
-              Meets <span className="font-black text-gray-900">Flavor.</span>
+              <span className="block text-4xl md:text-6xl  text-gray-900">
+                Meets Flavor.
+              </span>
             </h1>
 
             <Link
@@ -98,11 +101,11 @@ export default function HomePage() {
           </div>
 
           {/* Right hero image */}
-          <div className="w-full sm:w-3/4 md:w-[520px] lg:w-[600px]">
+          <div className="w-full md:flex-1 flex justify-center md:justify-end overflow-visible px-6 md:px-0">
             <img
               src="/assets/hero-image.png"
               alt="Hero Food"
-              className="w-full object-contain"
+              className="w-[80%] sm:w-[60%] md:w-[92%] object-contain md:translate-x-68 md:translate-y-25 "
             />
           </div>
         </div>
